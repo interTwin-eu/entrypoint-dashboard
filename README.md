@@ -39,49 +39,6 @@ cd intertwin-dashboard
 
 ### 2. Configure the Environment
 
-Aquí tienes un ejemplo detallado y profesional de un archivo `README.md` en inglés para tu repositorio:
-
----
-
-# interTwin Dashboard
-
-## Overview
-
-The **interTwin Dashboard** is a customizable entry point for interTwin services, providing a user-friendly interface to access and monitor cloud, data lake, AI orchestration, and other related services. Built with [Homer](https://github.com/bastienwirtz/homer), it includes a connectivity check feature to ensure the availability of resources.
-
-This dashboard serves as a central hub for accessing tools and workflows, making it easier for users to navigate the interTwin ecosystem.
-
----
-
-## Features
-
-* **Customizable UI** : Modify themes, logos, and service details through configuration files.
-* **Service Monitoring** : Real-time connectivity checks for integrated services.
-* **Flexible Proxy Integration** : Utilizes [CORS Anywhere](https://github.com/Rob--W/cors-anywhere) to bypass CORS restrictions for external APIs.
-* **Lightweight Deployment** : Runs in Docker containers for ease of setup and management.
-
----
-
-## Prerequisites
-
-Before setting up the dashboard, ensure you have the following installed:
-
-1. [Docker](https://docs.docker.com/get-docker/)
-2. [Docker Compose](https://docs.docker.com/compose/install/)
-
----
-
-## Installation
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/<your-username>/intertwin-dashboard.git
-cd intertwin-dashboard
-```
-
-### 2. Configure the Environment
-
 1. Rename `example.env  ` to `.env` and adjust the values as needed:
 
    ```plaintext
