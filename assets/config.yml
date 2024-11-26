@@ -1,0 +1,146 @@
+title: "interTwin Dashboard"
+subtitle: "Entry point to interTwin Services"
+logo: "assets/intertwin-white.png"
+header: true
+footer: '<p>Powered by <a href="https://www.intertwin.eu/">interTwin</a> | Dashboard created with <a href="https://github.com/bastienwirtz/homer">Homer</a>.</p>'
+columns: 3
+connectivityCheck: true
+
+# Colors and branding
+colors:
+  light:
+    highlight-primary: "#000000"
+    highlight-secondary: "#ff9900"
+    highlight-hover: "#000000"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#333333"
+    text-header: "#ffffff"
+    text-title: "#000000"
+    text-subtitle: "#555555"
+    link: "#0073e6"
+    link-hover: "#ff9900"
+
+  dark:
+    highlight-primary: "#000000"
+    highlight-secondary: "#ff9900"
+    highlight-hover: "#005bb5"
+    background: "#1a1a1a"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#cccccc"
+    link: "#0073e6"
+    link-hover: "#ff9900"
+    background-image: "/assets/background-dark.png"  # Custom background image
+
+# Custom fonts
+stylesheet:
+  - "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+
+# Default layout
+defaults:
+  layout: columns
+  colorTheme: light
+
+# Services
+services:
+  - name: "Cloud Services"
+    icon: "fas fa-cloud"
+    items:
+      - name: "GRNET Openstack"
+        type: "Ping"
+        logo: "assets/grnet.png"
+        url: "https://ui.cloud.grnet.gr/"
+        endpoint: "https://cors-anywhere.herokuapp.com/https://ui.cloud.grnet.gr/"
+        subtitle: "Access GRNET Openstack"
+        target: "_blank"
+        method: "head"
+        successCodes: [200, 301, 302, 401, 403]
+        timeout: 10000
+      - name: "UKRI Openstack"
+        type: "Ping"
+        logo: "assets/stfc.png"
+        url: "https://openstack.stfc.ac.uk/"
+        subtitle: "UKRI Openstack Dashboard"
+        endpoint: "https://cors-anywhere.herokuapp.com/https://openstack.stfc.ac.uk/"
+        timeout: 5000
+        target: "_blank"
+
+  - name: "Data Lake Services"
+    icon: "fas fa-database"
+    items:
+      - name: "Rucio"
+        type: "Ping"
+        logo: "assets/rucio.png"
+        url: "https://rucio-intertwin-testbed.desy.de"
+        subtitle: "Manage large-scale datasets"
+        endpoint: "https://cors-anywhere.herokuapp.com/https://rucio-intertwin-testbed.desy.de"
+        timeout: 5000
+        target: "_blank"
+      - name: "FTS Monitoring"
+        type: "Ping"
+        logo: "assets/fts.png"
+        url: "https://fts-egi.cern.ch:8449/fts3/ftsmon/"
+        endpoint: "https://cors-anywhere.herokuapp.com/https://fts-egi.cern.ch:8449/fts3/ftsmon/"
+        timeout: 5000
+        subtitle: "Monitor FTS Server"
+        target: "_blank"
+
+  - name: "AI Orchestrator"
+    icon: "fas fa-robot"
+    items:
+      - name: "PaaS Orchestrator"
+        type: "Ping"
+        logo: "assets/paas.png"
+        url: "https://eosc-paas.cloud.ba.infn.it"
+        subtitle: "Orchestrate AI workflows"
+        endpoint: "https://cors-anywhere.herokuapp.com/https://eosc-paas.cloud.ba.infn.it"
+        timeout: 5000
+        target: "_blank"
+
+  - name: "Workflows"
+    icon: "fas fa-project-diagram"
+    items:
+      - name: "OSCAR"
+        type: "Ping"
+        logo: "assets/oscar.png"
+        url: "https://beautiful-lederberg3.im.grycap.net/"
+        subtitle: "OSCAR Cluster Management"
+        endpoint: "https://cors-anywhere.herokuapp.com/https://beautiful-lederberg3.im.grycap.net/"
+        target: "_blank"
+      - name: "MLFlow"
+        type: "Ping"
+        logo: "https://mlflow.org/docs/latest/_static/MLflow-logo-final-black.png"
+        url: "https://mlflow.intertwin.fedcloud.eu/"
+        subtitle: "ML Experiment Tracking"
+        endpoint: "https://cors-anywhere.herokuapp.com/https://mlflow.intertwin.fedcloud.eu/"
+        timeout: 10000
+        method: "get"
+        successCodes: [200, 301, 302, 401, 403, 418]
+        target: "_blank"
+
+  - name: "AAI Services"
+    icon: "fas fa-user-shield"
+    items:
+      - name: "EGI Check-in"
+        type: "Ping"
+        logo: "assets/egi.png"
+        url: "https://aai-demo.egi.eu"
+        subtitle: "Access EGI Check-in"
+        endpoint: "https://cors-anywhere.herokuapp.com/https://aai-demo.egi.eu/registry/"
+        timeout: 5000
+        target: "_blank"
+
+  - name: "SQAaaS"
+    icon: "fas fa-tools"
+    items:
+      - name: "Software Quality as a Service"
+        type: "Ping"
+        logo: "assets/SQAaaS.png"
+        url: "https://sqaaas.eosc-synergy.eu/"
+        subtitle: "SQAaaS for interTwin"
+        endpoint: "https://cors-anywhere.herokuapp.com/https://sqaaas.eosc-synergy.eu/"
+        timeout: 5000
+        target: "_blank"
