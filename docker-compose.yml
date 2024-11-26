@@ -10,6 +10,8 @@ services:
     volumes:
       - ./assets:/www/assets
     restart: unless-stopped
+    networks:
+      - internal_network
 
   cors-anywhere:
     image: sourabh385/cors-anywhere:latest
@@ -19,3 +21,10 @@ services:
     ports:
       - "${CORS_PORT}:5000"
     restart: unless-stopped
+    networks:
+      - internal_network
+
+networks:
+  internal_network:
+    driver: bridge
+    name: internal_network
