@@ -53,7 +53,7 @@ services:
         type: "Ping"
         logo: "assets/grnet.png"
         url: "https://ui.cloud.grnet.gr/"
-        endpoint: "http://localhost:8086/https://ui.cloud.grnet.gr/"
+        endpoint: "<http://your-host-o-domain:port>/https://ui.cloud.grnet.gr/"
         subtitle: "Access GRNET Openstack"
         target: "_blank"
         method: "head"
@@ -64,7 +64,7 @@ services:
         logo: "assets/stfc.png"
         url: "https://openstack.stfc.ac.uk/"
         subtitle: "UKRI Openstack Dashboard"
-        endpoint: "http://localhost:8086/https://openstack.stfc.ac.uk/"
+        endpoint: "<http://your-host-o-domain:port>/https://openstack.stfc.ac.uk/"
         timeout: 5000
         target: "_blank"
 
@@ -76,14 +76,14 @@ services:
         logo: "assets/rucio.png"
         url: "https://rucio-intertwin-testbed.desy.de"
         subtitle: "Manage large-scale datasets"
-        endpoint: "http://localhost:8086/https://rucio-intertwin-testbed.desy.de"
+        endpoint: "<http://your-host-o-domain:port>/https://rucio-intertwin-testbed.desy.de"
         timeout: 5000
         target: "_blank"
       - name: "FTS Monitoring"
         type: "Ping"
         logo: "assets/fts.png"
         url: "https://fts-egi.cern.ch:8449/fts3/ftsmon/"
-        endpoint: "http://localhost:8086/https://fts-egi.cern.ch:8449/fts3/ftsmon/#/"
+        endpoint: "<http://your-host-o-domain:port>/https://fts-egi.cern.ch:8449/fts3/ftsmon/#/"
         timeout: 5000
         subtitle: "Monitor FTS Server"
         target: "_blank"
@@ -96,7 +96,7 @@ services:
         logo: "assets/paas.png"
         url: "https://eosc-paas.cloud.ba.infn.it"
         subtitle: "Orchestrate AI workflows"
-        endpoint: "http://localhost:8086/https://eosc-paas.cloud.ba.infn.it/home/login"
+        endpoint: "<http://your-host-o-domain:port>/https://eosc-paas.cloud.ba.infn.it/home/login"
         timeout: 5000
         target: "_blank"
 
@@ -108,14 +108,14 @@ services:
         logo: "assets/oscar.png"
         url: "https://beautiful-lederberg3.im.grycap.net/"
         subtitle: "OSCAR Cluster Management"
-        endpoint: "http://localhost:8086/https://beautiful-lederberg3.im.grycap.net/"
+        endpoint: "<http://your-host-o-domain:port>/https://beautiful-lederberg3.im.grycap.net/"
         target: "_blank"
       - name: "MLFlow"
         type: "Ping"
         logo: "https://mlflow.org/docs/latest/_static/MLflow-logo-final-black.png"
         url: "https://mlflow.intertwin.fedcloud.eu/"
         subtitle: "ML Experiment Tracking"
-        endpoint: "http://localhost:8086/https://mlflow.intertwin.fedcloud.eu/"
+        endpoint: "<http://your-host-o-domain:port>/https://mlflow.intertwin.fedcloud.eu/"
         timeout: 10000
         method: "get"
         successCodes: [200, 301, 302, 401, 403, 418]
@@ -129,7 +129,7 @@ services:
         logo: "assets/egi.png"
         url: "https://aai-demo.egi.eu"
         subtitle: "Access EGI Check-in"
-        endpoint: "http://localhost:8086/https://aai-demo.egi.eu/registry/"
+        endpoint: "<http://your-host-o-domain:port>/https://aai-demo.egi.eu/registry/"
         timeout: 5000
         target: "_blank"
 
@@ -141,6 +141,6 @@ services:
         logo: "assets/SQAaaS.png"
         url: "https://sqaaas.eosc-synergy.eu/"
         subtitle: "SQAaaS for interTwin"
-        endpoint: "http://localhost:8086/https://sqaaas.eosc-synergy.eu/"
+        endpoint: "<http://your-host-o-domain:port>/https://sqaaas.eosc-synergy.eu/"
         timeout: 5000
         target: "_blank"
