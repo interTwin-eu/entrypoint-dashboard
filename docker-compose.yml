@@ -2,11 +2,20 @@ version: '3.8'
 services:
   homer:
     image: b4bz/homer:latest
-    container_name: homer
+    container_name: intertwin-dashboard
     ports:
       - "${HOMER_PORT}:8080"
     environment:
       - SIDECAR_STATUS_ENABLED=true
     volumes:
       - ./assets:/www/assets
+    restart: unless-stopped
+
+  cors-anywhere:
+    image: sourabh385/cors-anywhere:latest
+    container_name: cors-anywhere
+    environment:
+      - NODE_TLS_REJECT_UNAUTHORIZED=0
+    ports:
+      - "${CORS_PORT}:5000"
     restart: unless-stopped
