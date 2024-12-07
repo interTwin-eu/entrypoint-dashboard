@@ -3,8 +3,8 @@ services:
   homer:
     image: b4bz/homer:latest
     container_name: intertwin-dashboard
-    ports:
-      - "${HOMER_PORT}:8080"
+    # ports:
+    #   - "${HOMER_PORT}:8080"
     environment:
       - SIDECAR_STATUS_ENABLED=true
     volumes:
@@ -18,11 +18,27 @@ services:
     container_name: cors-anywhere
     environment:
       - NODE_TLS_REJECT_UNAUTHORIZED=0
-    ports:
-      - "${CORS_PORT}:5000"
+      - PORT=5000
+      - CORSANYWHERE_PATH=/cors
+    # ports:
+    #   - "${CORS_PORT}:5000"
     restart: unless-stopped
     networks:
       - internal_network
+
+  caddy:
+    image: caddy:latest
+    container_name: caddy-proxy
+    ports:
+      - "${HTTP_PORT}:80"
+      - "${HTTPS_PORT}:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy_data:/data
+      - ./caddy_config:/config
+    networks:
+      - internal_network
+    restart: unless-stopped
 
 networks:
   internal_network:
