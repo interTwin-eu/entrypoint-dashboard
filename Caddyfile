@@ -1,16 +1,12 @@
-:80 {
-    # Redirigir HTTP a HTTPS
-    redir https://{host}{uri}
-}
+:8083 {
 
-:443 {
-    tls internal
+    # Maneja las peticiones a /cors
+    handle_path /cors* {
+        reverse_proxy cors-anywhere:5000
+    }
 
-    # Proxy para Homer
-    reverse_proxy / intertwin-dashboard:8080
-
-    # Proxy para CORS Anywhere en el path /cors
-    reverse_proxy /cors/* cors-anywhere:5000 {
-        rewrite /cors/*
+    # Maneja las peticiones a la raíz
+    handle {
+        reverse_proxy intertwin-dashboard:8080
     }
 }

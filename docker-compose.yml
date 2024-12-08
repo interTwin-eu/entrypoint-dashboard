@@ -30,8 +30,7 @@ services:
     image: caddy:latest
     container_name: caddy-proxy
     ports:
-      - "${HTTP_PORT}:80"
-      - "${HTTPS_PORT}:443"
+      - "${ACCESS_PORT}:8083"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - ./caddy_data:/data
