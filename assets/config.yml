@@ -50,7 +50,7 @@ services:
     icon: "fas fa-cloud"
     items:
       - name: "GRNET Openstack"
-        type: "Ping"
+        # type: "Ping"
         logo: "assets/grnet.png"
         url: "https://ui.cloud.grnet.gr/"
         endpoint: "<http://your-host-o-domain>/cors/https://ui.cloud.grnet.gr/"
@@ -60,7 +60,7 @@ services:
         successCodes: [200, 301, 302, 401, 403]
         timeout: 10000
       - name: "UKRI Openstack"
-        type: "Ping"
+        # type: "Ping"
         logo: "assets/stfc.png"
         url: "https://openstack.stfc.ac.uk/"
         subtitle: "UKRI Openstack Dashboard"
@@ -72,7 +72,7 @@ services:
     icon: "fas fa-database"
     items:
       - name: "Rucio"
-        type: "Ping"
+        # type: "Ping"
         logo: "assets/rucio.png"
         url: "https://rucio-intertwin-testbed.desy.de"
         subtitle: "Manage large-scale datasets"
@@ -80,7 +80,7 @@ services:
         timeout: 5000
         target: "_blank"
       - name: "FTS Monitoring"
-        type: "Ping"
+        # type: "Ping"
         logo: "assets/fts.png"
         url: "https://fts-egi.cern.ch:8449/fts3/ftsmon/"
         endpoint: "<http://your-host-o-domain>/cors/https://fts-egi.cern.ch:8449/fts3/ftsmon/#/"
@@ -92,7 +92,7 @@ services:
     icon: "fas fa-robot"
     items:
       - name: "PaaS Orchestrator"
-        type: "Ping"
+        # type: "Ping"
         logo: "assets/paas.png"
         url: "https://eosc-paas.cloud.ba.infn.it"
         subtitle: "Orchestrate AI workflows"
@@ -104,14 +104,14 @@ services:
     icon: "fas fa-project-diagram"
     items:
       - name: "OSCAR"
-        type: "Ping"
+        # type: "Ping"
         logo: "assets/oscar.png"
         url: "https://beautiful-lederberg3.im.grycap.net/"
         subtitle: "OSCAR Cluster Management"
         endpoint: "<http://your-host-o-domain>/cors/https://beautiful-lederberg3.im.grycap.net/"
         target: "_blank"
       - name: "MLFlow"
-        type: "Ping"
+        # type: "Ping"
         logo: "https://mlflow.org/docs/latest/_static/MLflow-logo-final-black.png"
         url: "https://mlflow.intertwin.fedcloud.eu/"
         subtitle: "ML Experiment Tracking"
@@ -125,7 +125,7 @@ services:
     icon: "fas fa-user-shield"
     items:
       - name: "EGI Check-in"
-        type: "Ping"
+        # type: "Ping"
         logo: "assets/egi.png"
         url: "https://aai-demo.egi.eu"
         subtitle: "Access EGI Check-in"
@@ -137,7 +137,7 @@ services:
     icon: "fas fa-tools"
     items:
       - name: "Software Quality as a Service"
-        type: "Ping"
+        # type: "Ping"
         logo: "assets/SQAaaS.png"
         url: "https://sqaaas.eosc-synergy.eu/"
         subtitle: "SQAaaS for interTwin"
