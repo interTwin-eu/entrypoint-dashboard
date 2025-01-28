@@ -46,11 +46,17 @@ defaults:
 
 # Services
 services:
-  - name: "Cloud Services"
+  - name: "Compute and Cloud Services"
     icon: "fas fa-cloud"
     items:
+      - name: "JupyterHub with HPC offloading"
+        logo: "assets/jupyter.svg"
+        url: "https://jupyter-ukri.intertwin.fedcloud.eu/"
+        subtitle: "JupyterHub with interLink support"
+        endpoint: "<http://your-host-o-domain>/cors/https://jupyter-ukri.intertwin.fedcloud.eu/"
+        timeout: 5000
+        target: "_blank"
       - name: "GRNET Openstack"
-        # type: "Ping"
         logo: "assets/grnet.png"
         url: "https://ui.cloud.grnet.gr/"
         endpoint: "<http://your-host-o-domain>/cors/https://ui.cloud.grnet.gr/"
@@ -60,19 +66,18 @@ services:
         successCodes: [200, 301, 302, 401, 403]
         timeout: 10000
       - name: "UKRI Openstack"
-        # type: "Ping"
         logo: "assets/stfc.png"
         url: "https://openstack.stfc.ac.uk/"
         subtitle: "UKRI Openstack Dashboard"
         endpoint: "<http://your-host-o-domain>/cors/https://openstack.stfc.ac.uk/"
         timeout: 5000
         target: "_blank"
+    
 
   - name: "Data Lake Services"
     icon: "fas fa-database"
     items:
       - name: "Rucio"
-        # type: "Ping"
         logo: "assets/rucio.png"
         url: "https://rucio-intertwin-testbed.desy.de"
         subtitle: "Manage large-scale datasets"
@@ -80,42 +85,58 @@ services:
         timeout: 5000
         target: "_blank"
       - name: "FTS Monitoring"
-        # type: "Ping"
         logo: "assets/fts.png"
         url: "https://fts-egi.cern.ch:8449/fts3/ftsmon/"
         endpoint: "<http://your-host-o-domain>/cors/https://fts-egi.cern.ch:8449/fts3/ftsmon/#/"
         timeout: 5000
         subtitle: "Monitor FTS Server"
         target: "_blank"
+      - name: "VEGA dCache"
+        logo: "assets/dcache.png"
+        url: "https://dcache.sling.si:2880/projects/"
+        endpoint: "<http://your-host-o-domain>/cors/https://dcache.sling.si:2880/projects/"
+        timeout: 5000
+        subtitle: "dCache storage system at VEGA"
+        target: "_blank"
 
-  - name: "AI Orchestrator"
+  - name: "Orchestration and infrastructure management"
     icon: "fas fa-robot"
     items:
       - name: "PaaS Orchestrator"
-        # type: "Ping"
         logo: "assets/paas.png"
         url: "https://eosc-paas.cloud.ba.infn.it"
-        subtitle: "Orchestrate AI workflows"
+        subtitle: "Orchestrate Cloud Deployment"
         endpoint: "<http://your-host-o-domain>/cors/https://eosc-paas.cloud.ba.infn.it/home/login"
         timeout: 5000
         target: "_blank"
+      - name: "Infrastructure Manager"
+        logo: "assets/im.png"
+        url: "https://im.egi.eu"
+        subtitle: "Infrastructure Management "
+        endpoint: "<http://your-host-o-domain>/cors/https://im.egi.eu"
+        timeout: 5000
+        target: "_blank"
 
-  - name: "Workflows"
+  - name: "Workflows and AI"
     icon: "fas fa-project-diagram"
     items:
+      - name: "openEO"
+        logo: "assets/openeo.png"
+        url: "https://editor.openeo.org/?server=https%3A%2F%2Fopeneo.intertwin.fedcloud.eu%2F1.1.0%2F"
+        subtitle: ""
+        endpoint: "<http://your-host-o-domain>/cors/https://editor.openeo.org/?server=https%3A%2F%2Fopeneo.intertwin.fedcloud.eu%2F1.1.0%2F"
+        target: "_blank"
       - name: "OSCAR"
-        # type: "Ping"
         logo: "assets/oscar.png"
         url: "https://beautiful-lederberg3.im.grycap.net/"
         subtitle: "OSCAR Cluster Management"
         endpoint: "<http://your-host-o-domain>/cors/https://beautiful-lederberg3.im.grycap.net/"
         target: "_blank"
       - name: "MLFlow"
-        # type: "Ping"
         logo: "https://mlflow.org/docs/latest/_static/MLflow-logo-final-black.png"
-        url: "https://mlflow.intertwin.fedcloud.eu/"
+        url: "https://mlflow.intertwin.fedcloud.eu/signup"
         subtitle: "ML Experiment Tracking"
-        endpoint: "<http://your-host-o-domain>/cors/https://mlflow.intertwin.fedcloud.eu/"
+        endpoint: "<http://your-host-o-domain>/cors/https://mlflow.intertwin.fedcloud.eu/signup"
         timeout: 10000
         method: "get"
         successCodes: [200, 301, 302, 401, 403, 418]
@@ -125,11 +146,17 @@ services:
     icon: "fas fa-user-shield"
     items:
       - name: "EGI Check-in"
-        # type: "Ping"
         logo: "assets/egi.png"
         url: "https://aai-demo.egi.eu"
         subtitle: "Access EGI Check-in"
         endpoint: "<http://your-host-o-domain>/cors/https://aai-demo.egi.eu/registry/"
+        timeout: 5000
+        target: "_blank"
+      - name: "ALISE"
+        logo: "assets/alise.svg"
+        url: "https://alise.data.kit.edu/"
+        subtitle: "Map AAI identities to local HPC/HTC accounts"
+        endpoint: "<http://your-host-o-domain>/cors/https://alise.data.kit.edu/"
         timeout: 5000
         target: "_blank"
 
@@ -137,7 +164,6 @@ services:
     icon: "fas fa-tools"
     items:
       - name: "Software Quality as a Service"
-        # type: "Ping"
         logo: "assets/SQAaaS.png"
         url: "https://sqaaas.eosc-synergy.eu/"
         subtitle: "SQAaaS for interTwin"
