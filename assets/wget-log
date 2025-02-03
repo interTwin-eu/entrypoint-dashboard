@@ -1,0 +1,6 @@
+--2025-01-27 22:01:38--  https://www.egi.eu/_next/image/?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2023%2F06%2Fegi-icon-infrastructure-manager-SQ_W.jpg
+Resolving www.egi.eu (www.egi.eu)... 78.128.211.228, 2001:718:1:1f:50:56ff:feee:228
+Connecting to www.egi.eu (www.egi.eu)|78.128.211.228|:443... connected.
+HTTP request sent, awaiting response... 400 Bad Request
+2025-01-27 22:01:38 ERROR 400: Bad Request.
+
