@@ -74,7 +74,7 @@ services:
         target: "_blank"
     
 
-  - name: "Data Lake Services"
+  - name: "Data Management Services"
     icon: "fas fa-database"
     items:
       - name: "Rucio"
@@ -90,6 +90,13 @@ services:
         endpoint: "<http://your-host-o-domain>/cors/https://fts-egi.cern.ch:8449/fts3/ftsmon/#/"
         timeout: 5000
         subtitle: "Monitor FTS Server"
+        target: "_blank"
+      - name: "STAC Catalogue"
+        url: "https://stac.intertwin.fedcloud.eu/"
+        logo: "https://stacspec.org/public/images-original/STAC-01.png"
+        endpoint: "<http://your-host-o-domain>/cors/https://stac.intertwin.fedcloud.eu/"
+        timeout: 5000
+        subtitle: "STAC FAST API Server"
         target: "_blank"
       - name: "VEGA dCache"
         logo: "assets/dcache.png"
@@ -139,7 +146,7 @@ services:
         endpoint: "<http://your-host-o-domain>/cors/https://oscar-grnet.intertwin.fedcloud.eu/"
         target: "_blank"
       - name: "MLFlow"
-        logo: "https://mlflow.org/docs/latest/_static/MLflow-logo-final-black.png"
+        logo: "https://mlflow.org/docs/latest/images/logo-light.svg"
         url: "https://mlflow.intertwin.fedcloud.eu/signup"
         subtitle: "ML Experiment Tracking"
         endpoint: "<http://your-host-o-domain>/cors/https://mlflow.intertwin.fedcloud.eu/signup"
